@@ -521,6 +521,12 @@ func Values(s interface{}) []interface{} {
 	return New(s).Values()
 }
 
+// StringValues converts the given struct to a []string{}. For more info refer
+// to Struct types StringValues() method.  It panics if s's kind is not struct.
+func StringValues(s interface{}) []string {
+	return New(s).StringValues()
+}
+
 // Fields returns a slice of *Field. For more info refer to Struct types
 // Fields() method.  It panics if s's kind is not struct.
 func Fields(s interface{}) []*Field {
